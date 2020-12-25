@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无敌的也罹</title>
+    <style>
+        *{margin:0px auto; padding:0px;}
+        #kuangjia
+        {width:540px; height:720px; border:#0FF solid 3px; background-size:cover; background-repeat:no-repeat;}
+        .t1
+        {width:80px; height:80px; background-repeat:no-repeat; background-size:contain; cursor:pointer;}
+        #t2
+        {float:left; margin:365px 0px 0px 20px; background-image:url(./images/left.png);}
+        #t3
+        {float:right; margin:365px 20px 0px 0px; background-image:url(./images/right.png);}
+    </style>
+</head>
+<body>
+    <p>
+        Hello, I'm XiaoHengheng!
+    </p>
+    <div class="background bgshow" style="background-image: url(&quot;filesystem:chrome-extension://kbgmbmkhepchmmcnbdbclpkpegbgikjc/temporary/background.jpg&quot;);"></div>
+    <div id="kuangjia"><!--大div作为框架-->
+        <div class="t1" id="t2" onclick="(dd(-1))"></div>
+        <div class="t1" id="t3" onclick="(dd(1))"></div>
+    </div>
+    <h1>这里是小恒恒的美照</h1>
+    <p>
+        <!-- <img src="https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image01.png" width="540" height="720" />
+        <img src="https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image02.png" width="540" height="720" /> -->
+    </p>
+    <h1>这里是小恒恒的简历（个人介绍）</h1>
+    <p>
+        
+    </p>
+    <h1>这里是小恒恒的成就打卡点</h1>
+    <p>
+        
+    </p>
+    <h1>这里是小恒恒的爸爸专区</h1>
+    <p>
+        
+    </p>
+</body>
+</html>
+
+<script>
+    var jh=new Array();
+    jh[0]="url(./images/image01.png)";
+    jh[1]="url(./images/image02.png)";
+    
+    var kj=document.getElementById("kuangjia"); /* 获取框架div的标签，在下面进行更改背景 */
+    var x=-1;                                   /* 定义变量x，建立索引 */
+    var l=jh.length;                            /* 获取集合中元素个数 */
+    function lb()
+    {
+        x++;
+        if (x==l)
+        {
+            x=0;
+        }
+        kj.style.backgroundImage=jh[x];
+        window.setTimeout("lb()",3000);         /* 3s后再次播放集合中的图片 */
+    }
+    window.setTimeout("lb()",0);                /* 开始进行轮播 */
+    
+    function dd(m)
+    {
+        x=x+m;
+        if(x==l)    
+        {x=0;}
+        else if(x==-1)
+        {x=l;}
+        kj.style.backgroundImage=jh[x];
+    }
+    </script>

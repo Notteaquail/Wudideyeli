@@ -1,77 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>无敌的也罹</title>
-    <style>
-        *{margin:0px auto; padding:0px;}
-        #kuangjia
-        {width:540px; height:720px; border:#0FF solid 3px; background-size:cover; background-repeat:no-repeat;}
-        .t1
-        {width:80px; height:80px; background-repeat:no-repeat; background-size:contain; cursor:pointer;}
-        #t2
-        {float:left; margin:365px 0px 0px 20px; background-image:url(./images/left.png);}
-        #t3
-        {float:right; margin:365px 20px 0px 0px; background-image:url(./images/right.png);}
-    </style>
-</head>
-<body>
-    <p>
-        Hello, I'm XiaoHengheng!
-    </p>
-    <div class="background bgshow" style="background-image: url(&quot;filesystem:chrome-extension://kbgmbmkhepchmmcnbdbclpkpegbgikjc/temporary/background.jpg&quot;);"></div>
-    <div id="kuangjia"><!--大div作为框架-->
-        <div class="t1" id="t2" onclick="(dd(-1))"></div>
-        <div class="t1" id="t3" onclick="(dd(1))"></div>
-    </div>
-    <h1>这里是小恒恒的美照</h1>
-    <p>
-        <!-- <img src="https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image01.png" width="540" height="720" />
-        <img src="https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image02.png" width="540" height="720" /> -->
-    </p>
-    <h1>这里是小恒恒的简历（个人介绍）</h1>
-    <p>
-        
-    </p>
-    <h1>这里是小恒恒的成就打卡点</h1>
-    <p>
-        
-    </p>
-    <h1>这里是小恒恒的爸爸专区</h1>
-    <p>
-        
-    </p>
-</body>
-</html>
+<html>
 
-<script>
-    var jh=new Array();
-    jh[0]="url(./images/image01.png)";
-    jh[1]="url(./images/image02.png)";
-    
-    var kj=document.getElementById("kuangjia"); /* 获取框架div的标签，在下面进行更改背景 */
-    var x=-1;                                   /* 定义变量x，建立索引 */
-    var l=jh.length;                            /* 获取集合中元素个数 */
-    function lb()
-    {
-        x++;
-        if (x==l)
-        {
-            x=0;
-        }
-        kj.style.backgroundImage=jh[x];
-        window.setTimeout("lb()",3000);         /* 3s后再次播放集合中的图片 */
-    }
-    window.setTimeout("lb()",0);                /* 开始进行轮播 */
-    
-    function dd(m)
-    {
-        x=x+m;
-        if(x==l)    
-        {x=0;}
-        else if(x==-1)
-        {x=l;}
-        kj.style.backgroundImage=jh[x];
-    }
-    </script>
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dmego Home">
+    <meta name="keywords" content="Dmego,Homepage">
+    <meta name="author" content="Dmego">
+    <title>Dmego Home</title>
+    <link rel='stylesheet' type='text/css' href='https://cdn.webfont.youziku.com/webfonts/nomal/123918/33195/5d21f88af629d8080c5960eb.css' />
+    <link rel="stylesheet" type="text/css" href="./assets/css/vno.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/iconfont.css">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+    <span class="mobile btn-mobile-menu">
+        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
+        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
+    </span>
+    <header id="panel" class="panel-cover">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <div class="ih-item circle effect right_to_left">            
+                        <a href="#" title="" class="blog-button">
+                            <div class="img"><img src="./img/logo2.jpg" alt="img" class="js-avatar iUp profilepic"></div>
+                            <div class="info iUp">
+                                <div class="info-back">
+                                    <h2> 
+                                        
+                                            Fighting
+                                        
+                                    </h2>
+                                    <p>
+                                        
+                                            2019 · 努力
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- <a href="#" title="Dmego Home" class="profilepic">
+                        <img src="./img/logo2.jpg" width="80" alt="Dmego`s logo" class="js-avatar iUp show" />
+                    </a> -->
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <a href="#" title="Dmego Home">Dmego</a>
+                    </h1>
+                    <p class="panel-cover__subtitle panel-subtitle iUp">Code Create Life</p>
+                    <hr class="panel-cover__divider iUp" />
+                    <p id="description" class="panel-cover__description iUp">如何得与凉风约，不共尘沙一并来!
+                        <br/>
+                        <strong>-「中牟道中」</strong>
+                    </p>
+                    <div class="navigation-wrapper iUp">
+                        <div>
+                            <nav class="cover-navigation cover-navigation--primary">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="/" class="blog-button">首页</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="https://dmego.me" class="blog-button" target="_blank">博客</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="https://r.dmego.me" class="blog-button" target="_blank">简历</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="https://dmego.me/about/" class="blog-button" target="_blank">关于</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="iUp">
+                            <nav class="cover-navigation navigation--social">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="https://github.com/dmego/" title="github" target="_blank">
+                                            <i class='social iconfont icon-github'></i>
+                                            <span class="label">github</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="http://www.cnblogs.com/dmego/" title="cnblogs" target="_blank">
+                                            <i class='social iconfont icon-cnblogs'></i>
+                                            <span class="label">cnblogs</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="navigation__item">
+                                        <a href="https://www.zhihu.com/people/dmego/" title="zhihu" target="_blank">
+                                            <i class='social iconfont icon-zhihu'></i>
+                                            <span class="label">zhihu</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="mailto:dmeago@gmail.com" title="email">
+                                            <i class='social iconfont icon-email'></i>
+                                            <span class="label">email</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        </div>
+        <!-- <div class="beian iUp">
+            <a class="icp" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">XXX</a>
+            <a class="gwab" href="http://www.beian.gov.cn/portal/recordQuery" target="_blank">XXX</a>
+        </div> -->
+        <div class="remark iUp">
+            <p class="power">Powered By 
+                <a href="https://bird.ioliu.cn/" target="_blank"> JsonBird </a> And 
+                <a href="https://hitokoto.cn/" target="_blank"> Hitokoto </a>
+            </p>
+        </div>
+    </header>
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/fetch.min.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+
+</html>
