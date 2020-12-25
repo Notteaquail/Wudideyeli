@@ -11,10 +11,10 @@
         .t1
         {width:80px; height:80px; background-repeat:no-repeat; background-size:contain; cursor:pointer;}
         #t2
-        {float:left; margin:365px 0px 0px 20px; background-image:url(https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/left.png);}
+        {float:left; margin:365px 0px 0px 20px; background-image:url(./images/left.png);}
         #t3
         {float:right; margin:365px 20px 0px 0px; background-image:url(https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/right.png);}
-        </style>
+    </style>
 </head>
 <body>
     <p>
@@ -27,8 +27,8 @@
     </div>
     <h1>这里是小恒恒的美照</h1>
     <p>
-        <img src="https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image01.png" width="540" height="720" />
-        <img src="https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image02.png" width="540" height="720" />
+        <!-- <img src="https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image01.png" width="540" height="720" />
+        <img src="https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image02.png" width="540" height="720" /> -->
     </p>
     <h1>这里是小恒恒的简历（个人介绍）</h1>
     <p>
@@ -50,9 +50,9 @@
     jh[0]="url(https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image01.png)";
     jh[1]="url(https://raw.githubusercontent.com/Notteaquail/Wudideyeli/main/images/image02.png)";
     
-    var kj=document.getElementById("kuangjia");<!--获取框架div的标签，在下面进行更改背景-->
-    var x=-1;<!--定义变量x，建立索引-->
-    var l=jh.length;<!--获取集合中元素个数-->
+    var kj=document.getElementById("kuangjia"); /* 获取框架div的标签，在下面进行更改背景 */
+    var x=-1;                                   /* 定义变量x，建立索引 */
+    var l=jh.length;                            /* 获取集合中元素个数 */
     function lb()
     {
         x++;
@@ -61,9 +61,9 @@
             x=0;
         }
         kj.style.backgroundImage=jh[x];
-        window.setTimeout("lb()",2000);<!--2s后再次播放集合中的图片-->
+        window.setTimeout("lb()",3000);         /* 3s后再次播放集合中的图片 */
     }
-    window.setTimeout("lb()",0);<!--开始进行轮播-->
+    window.setTimeout("lb()",0);                /* 开始进行轮播 */
     
     function dd(m)
     {
